@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <!-- Cargar el tag static -->
+    {% load static %}
+    <!-- Usar la función static para enlazar el archivo CSS -->
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Bienvenido a Melodify</h1>
+        <p>Explora nuestro sitio oficial, donde podrás encontrar música de acuerdo a tus gustos, ¡anímate!</p>
+        
+        <p><a href="{% url 'users:login' %}"><button>Iniciar sesión</button></a></p>
+        <p><a href="{% url 'users:register' %}"><button>Crear cuenta</button></a></p>
+    </div>
+</body>
+</html>

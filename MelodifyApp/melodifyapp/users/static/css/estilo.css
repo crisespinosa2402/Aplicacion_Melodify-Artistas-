@@ -1,0 +1,90 @@
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación de deslizamiento para el título */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilos generales para el body */
+body {
+    background-image: url('/static/img/melodify1.jpg');
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-attachment: fixed; /* La imagen se mantiene fija al hacer scroll */
+    height: 100vh; /* Hace que el fondo ocupe toda la altura de la ventana */
+    font-family: Arial, sans-serif; /* Establece la fuente */
+    display: flex; /* Usamos flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+/* Estilo para el contenedor que tiene el contenido */
+.contenedor {
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(214, 200, 200, 0.867); /* Fondo semitransparente */
+    border-radius: 10px;
+    margin-top: 100px;
+    width: 80%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 2s ease-out; /* Aplica la animación de desvanecimiento */
+}
+
+/* Título con animación de deslizamiento */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-out; /* Aplica la animación de deslizamiento */
+}
+
+/* Estilo para los párrafos */
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Estilo para los enlaces */
+a {
+    color: #ff6347; /* Color atractivo para los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: white; /* Cambia el color al pasar el cursor */
+    text-decoration: underline;
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #ff6347;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #e5533c; /* Cambia el color cuando el mouse pasa sobre el botón */
+}

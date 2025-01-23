@@ -1,0 +1,18 @@
+<!-- templates/music/song_list.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Canciones</title>
+</head>
+<body>
+    <h1>Lista de Canciones</h1>
+    <ul>
+        {% for song in songs %}
+            <li>
+                <a href="{% url 'song_detail' song.id %}">{{ song.title }} - {{ song.artist }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
